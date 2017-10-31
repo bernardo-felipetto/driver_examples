@@ -1,0 +1,15 @@
+This is a simple char diver using dynamic allocation with "alloc_chrdev_region"
+
+Please make sure to define your major and minor numbers first, and make sure they match the ones you will use as parameters in the make
+
+To run use:
+
+$ make major=your_major_number minor=your_major_number
+
+after that just follow the instructions on the screen and each time you want to access the driver use
+
+$ ./test
+
+To remove the driver use
+
+$ make clean

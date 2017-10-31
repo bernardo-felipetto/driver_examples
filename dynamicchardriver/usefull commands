@@ -1,0 +1,17 @@
+dynamicchardriver
+
+sudo chmod 777 /dev/dynamicchardriver
+
+sudo insmod dynamicchardriver.ko
+
+lsmod | grep dynamicchardriver
+
+sudo mknod -m 666 /dev/dynamicchardriver c 21 0
+
+sudo rmmod dynamicchardriver.ko
+
+sudo rm /dev/dynamicchardriver
+
+cc test.c -o test
+
+./test
