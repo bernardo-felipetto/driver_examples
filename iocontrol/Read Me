@@ -1,0 +1,33 @@
+Sample of communication using semaphores and IOCTL.
+
+To test this sample, please follow commands bellow:
+
+Please use two terminals to run this sample.
+
+To compile use the command:
+
+$ make
+
+After that you'll need to install the kernel object using:
+
+$ sudo insmod iocontroldevice.ko
+
+Now you'll be able to test the program.
+
+Open the second terminal and split your screen between both. Type the following command in both of your terminals:
+
+$ ./test
+
+When you're ready press enter quickly in one after the other.
+
+You should see both terminals trying to write numbers. Each one will write 1.000.000 times, when the program stop the final number should be 2.000.000.
+
+After you're done, use the command:
+
+$ sudo rmmod iocontroldevice
+
+and also:
+
+$ make clean
+
+to remove the kernel object and clean the other files.
