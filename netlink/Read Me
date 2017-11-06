@@ -1,0 +1,21 @@
+This is a simple netlink sample
+
+To compile use the command:
+
+$ Make
+
+After that you'll need to install the kernel object using:
+
+$ sudo insmod netLinkKernel.ko
+
+Now you'll be able to test the program.
+
+Use the command:
+
+$ ./test
+
+to start the program.
+
+after you type your message, you can verify that the kernel received it through:
+
+$ dmesg
